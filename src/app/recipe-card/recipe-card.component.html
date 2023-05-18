@@ -1,0 +1,15 @@
+<div class="card-container">
+    <button class="favoriteButton">
+        <div class="favorite"></div>
+    </button>
+    <img *ngIf="recipe.image" src={{recipe.image}} class="recipeImage" alt="No image.">
+    <h3> {{recipe.name}} </h3>
+    <div>
+        <h4>Cook time:</h4>
+        <div>{{recipe.cookTime}} minutes</div>
+    </div>
+    <div>
+        <h4>Servings:</h4>
+        <div>{{recipe.servings}}</div>
+    </div>
+</div>

@@ -1,0 +1,35 @@
+.title-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+    gap: 10px;
+    margin-top: 20px;
+
+    h1 {
+        color: purple;
+        font-weight: bold;
+        margin: 0px;
+    }
+    
+    .line {
+        width: 400px;
+        background-color: rgb(122, 122, 122);
+        height: 0.5px;
+    }
+}
+
+.recipe-list-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    margin-left: 7.45%;
+    margin-right: 7.35%;
+    background-color: rgb(206, 191, 206);
+    -webkit-box-shadow: 0px 11px 36px 10px rgba(0, 0, 0, 0.27);
+    -moz-box-shadow: 0px 11px 36px 10px rgba(0, 0, 0, 0.27);
+    box-shadow: 0px 11px 36px 10px rgba(0, 0, 0, 0.27);
+    border-radius: 10px;
+}

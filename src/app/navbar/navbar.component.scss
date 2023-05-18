@@ -1,0 +1,47 @@
+.navbar{
+    display: flex;
+    align-items: center;
+    height: 60px;
+    padding: 10px 100px;
+    gap: 10px;
+    background-color: purple;
+    color: white;
+    font-weight: bold;
+    
+    .links{
+        display: flex;
+        align-items: center;
+        gap: 100px;
+    }
+
+    a{
+        color: white;
+        padding: 5px 10px;
+        border: 1px solid white;
+        margin: none;
+        border-radius: 10px;
+        transition: all 0.5s;
+    }
+    a:visited{
+        color: white;
+        text-decoration: none;
+    }
+
+    a:hover{
+        background-color: rgb(238, 149, 238);
+    }
+
+    h1{
+        margin: 0px;
+        color: white;
+        flex: 1;
+    }
+}
+
+.cookieIcon{
+    height: 24px;
+    width: 24px;
+    background-image: url('../../assets/images/cake-cup-icon.svg') ;
+    background-size: contain;
+    background-repeat: no-repeat;
+}

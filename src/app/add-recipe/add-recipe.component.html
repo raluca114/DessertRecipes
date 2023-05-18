@@ -1,0 +1,63 @@
+<button nz-button [nzType]="'primary'" (click)="showModal()">
+    <span>Add recipe</span></button>
+<nz-modal [(nzVisible)]="isVisible" nzTitle="Add recipe" (nzOnCancel)="handleCancel()"
+    (nzOnOk)="handleOk(nameInput ?? '', imageInput ?? '', ingredientsInput ?? '', cookTimeInput ?? '', servingsInput ?? '', equipmentInput ?? '', instructionsInput ?? '' )">
+    <ng-container *nzModalContent>
+        <form class="form" [formGroup]="formGroup">
+            <div class="formGroup">
+                <label>Name:</label>
+                <input #nameInput formControlName="name">
+                <div *ngIf="formGroup.get('name')?.invalid && formGroup.get('name')?.touched" class="error-message">
+                    Name is required
+                </div>
+            </div>
+            <div class="formGroup">
+                <label>Image URL:</label>
+                <input #imageInput formControlName="image">
+                <div *ngIf="formGroup.get('image')?.invalid && formGroup.get('image')?.touched" class="error-message">
+                    ImageURL is required
+                </div>
+            </div>
+            <div class="formGroup">
+                <label>Ingredients:</label>
+                <input #ingredientsInput formControlName="ingredients">
+                <div *ngIf="formGroup.get('ingredients')?.invalid && formGroup.get('ingredients')?.touched"
+                    class="error-message">
+                    Ingredients are required
+                </div>
+            </div>
+            <div class="formGroup">
+                <label>Cook time (minutes):</label>
+                <input #cookTimeInput formControlName="cookTime">
+                <div *ngIf="formGroup.get('cookTime')?.invalid && formGroup.get('cookTime')?.touched"
+                    class="error-message">
+                    CookTime is required
+                </div>
+            </div>
+            <div class="formGroup">
+                <label>Servings:</label>
+                <input #servingsInput formControlName="servings">
+                <div *ngIf="formGroup.get('servings')?.invalid && formGroup.get('servings')?.touched"
+                    class="error-message">
+                    Servings is required
+                </div>
+            </div>
+            <div class="formGroup">
+                <label>Equipment:</label>
+                <input #equipmentInput formControlName="equipment">
+                <div *ngIf="formGroup.get('equipment')?.invalid && formGroup.get('equipment')?.touched"
+                    class="error-message">
+                    Equipment is required
+                </div>
+            </div>
+            <div class="formGroup">
+                <label>Instructions:</label>
+                <textarea #instructionsInput formControlName="instructions"></textarea>
+                <div *ngIf="formGroup.get('instructions')?.invalid && formGroup.get('instructions')?.touched"
+                    class="error-message">
+                    Instructions are required
+                </div>
+            </div>
+        </form>
+    </ng-container>
+</nz-modal>

@@ -1,0 +1,112 @@
+.edit-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+
+    .image-container {
+        width: 100%;
+        height: 100%;
+        background-color: rgb(19, 19, 19);
+      }
+    
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4));
+        -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgb(0, 0, 0, 0.6));
+      }
+
+    .form{
+        position: absolute;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        gap:10px;
+        width: 700px;
+        height: 700px;
+        padding: 30px;
+        border-radius: 10px;
+        border: 1px solid #cecece;
+        margin: 20px;
+
+        h1{
+            color: purple;
+        }
+    
+        .formGroup{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            label{
+                white-space: nowrap;
+                font-weight: bold;
+                color: purple;
+            }
+    
+            input{
+                border: 1px solid rgb(195, 194, 194);
+                border-radius: 6px;
+                height: 30px;
+            }
+    
+            textarea{
+                border: 1px solid rgb(195, 194, 194);
+                border-radius: 6px;
+            }
+        }
+
+        .buttons{
+            display: flex;
+            justify-content: flex-end;
+            gap: 10px;
+            margin-top: 20px;
+
+            button{
+                border-radius: 8px;
+                width: 130px;
+                height: 38px;
+                font-size: medium;
+                background-color: purple;
+                color: white;
+                padding: 5px;
+                border: 2px solid purple;
+                transition: all 0.5s;
+                box-shadow: 0 1px 2px 0 rgba(60,64,67,.3);
+                font-family:Georgia, 'Times New Roman', Times, serif;
+                margin-bottom: 20px;
+            }
+            
+            button:hover {
+                cursor: pointer;
+                background-color: rgb(210, 149, 210);
+                border: transparent;
+            }
+
+            .cancel-button{
+                border-radius: 8px;
+                width: 90px;
+                height: 38px;
+                font-size: medium;
+                background-color: gray;
+                color: white;
+                padding: 5px;
+                border: 2px solid gray;
+                transition: all 0.5s;
+                box-shadow: 0 1px 2px 0 rgba(60,64,67,.3);
+                font-family:Georgia, 'Times New Roman', Times, serif;
+                margin-bottom: 20px;
+            }
+
+            .cancel-button:hover {
+                cursor: pointer;
+                background-color: rgb(206, 206, 206);
+                color: black;
+                border: transparent;
+            }
+
+        }
+    }
+}

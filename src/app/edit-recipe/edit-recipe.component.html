@@ -1,0 +1,41 @@
+<div class="edit-container">
+    <div class="image-container">
+        <img src="https://images.pexels.com/photos/918327/pexels-photo-918327.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            alt="Image">
+    </div>
+    <form class="form" *ngIf="currentRecipe">
+        <h1>Looks like you want to make this recipe perfect...</h1>
+        <div class="formGroup">
+            <label>Name:</label>
+            <input [(ngModel)]="currentRecipe.name" name="name">
+        </div>
+        <div class="formGroup">
+            <label>Image:</label>
+            <input [(ngModel)]="currentRecipe.image" name="image">
+        </div>
+        <div class="formGroup">
+            <label>Ingredients:</label>
+            <input [(ngModel)]="currentRecipe.ingredients" name="ingredients">
+        </div>
+        <div class="formGroup">
+            <label>Cook time:</label>
+            <input [(ngModel)]="currentRecipe.cookTime" name="cookTime">
+        </div>
+        <div class="formGroup">
+            <label>Servings:</label>
+            <input [(ngModel)]="currentRecipe.servings" name="servings">
+        </div>
+        <div class="formGroup">
+            <label>Equipment:</label>
+            <input [(ngModel)]="currentRecipe.equipment" name="equipment">
+        </div>
+        <div class="formGroup">
+            <label>Instructions:</label>
+            <textarea [(ngModel)]="currentRecipe.instructions" name="instructions"></textarea>
+        </div>
+        <div class="buttons">
+            <button routerLink='../..' class="cancel-button">Cancel</button>
+            <button (click)="updateRecipe(currentRecipe)" routerLink='../..'>Apply changes</button>
+        </div>
+    </form>
+</div>

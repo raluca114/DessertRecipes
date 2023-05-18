@@ -1,0 +1,61 @@
+.card-container {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: 80px;
+    margin-right: 65px;
+    width: 240px;
+    height: 350px;
+    background-color: white;
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    transition: all 0.5s;
+
+    img {
+        height: 160px;
+        width: 190px;
+        border-radius: 8px;
+        margin-bottom: 40px;
+    }
+
+    p {
+        height: 100px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        color: rgb(35, 35, 35);
+    }
+
+    button {
+        position: absolute;
+        right: 10px;
+    }
+
+    div {
+        display: flex;
+        gap: 10px;
+    }
+}
+
+.card-container:hover {
+    cursor: pointer;
+    -webkit-box-shadow: 0px 11px 36px 10px rgba(0, 0, 0, 0.27);
+    -moz-box-shadow: 0px 11px 36px 10px rgba(0, 0, 0, 0.27);
+    box-shadow: 0px 11px 36px 10px rgba(0, 0, 0, 0.27);
+}
+
+.favorite {
+    height: 24px;
+    width: 24px;
+    background-image: url("../../assets/images/red-heart-icon.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.favoriteButton {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}

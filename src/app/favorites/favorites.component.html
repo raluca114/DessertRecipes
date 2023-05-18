@@ -1,0 +1,11 @@
+<app-navbar></app-navbar>
+<div class="title-container">
+    <h1> Favorite recipes </h1>
+    <div class="line"></div>
+    <app-search (filterEmitter)="filterRecipes($event)"></app-search>
+</div>
+<div class="recipe-list-container">
+    <ng-container *ngFor="let thisCard of filteredRecipes">
+        <app-recipe-card [recipe]="thisCard" ></app-recipe-card>
+    </ng-container>
+</div>

@@ -1,0 +1,149 @@
+h2{
+    margin-left: 100px;
+    margin-top: 50px;
+    color: purple;
+}
+
+.actions {
+    display: flex;
+    align-items: center;
+    padding: 0px 100px 10px 100px;
+    gap: 50px;
+
+    .searchWrapper {
+        display: flex;
+        align-items: center;
+        position: relative;
+        
+        input {
+            border: 1px solid rgb(195, 194, 194);
+            border-top-right-radius: 6px;
+            border-bottom-right-radius: 6px;
+            height: 40px;
+            width: 300px;
+        }
+        .searchIcon {
+            position: absolute;
+            right: 5px;
+            top: 10px;
+            height: 24px;
+            width: 24px;
+            background-image: url("../../assets/images/search-icon.svg");
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+    }
+}
+
+.tableWrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 0px 100px;
+    border: 1px solid #cecece;
+
+    h1{
+        color: purple;
+        margin-left: 30px;
+        margin-top: 20px;
+    }
+    .table{
+        display: flex;
+        padding: 10px;
+        border: 1px solid #cecece;
+        margin: 20px;
+        border-radius: 10px;
+    }
+
+    .loading {
+        height: 300px;
+        width: 100%;
+        font-size: 30px;
+        color: purple;
+        text-align: center;
+    }
+
+    .favoriteButton {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+
+        .notFavorite {
+            height: 24px;
+            width: 24px;
+            background-image: url("../../assets/images/heart-line-icon.svg");
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+        .favorite {
+            height: 24px;
+            width: 24px;
+            background-image: url("../../assets/images/red-heart-icon.svg");
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+    }
+
+    .buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        .editButton {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+            height: 30px;
+            width: 80px;
+            background-color: purple;
+            color: white;
+            border: 1px solid purple;
+            border-radius: 10px;
+            box-shadow: 0 1px 2px 0 rgba(60,64,67,.3);
+            transition: all 0.5s;
+            font-weight: bold;
+            .editIcon {
+                height: 16px;
+                width: 16px;
+                background-image: url("../../assets/images/pencil-icon.svg");
+            }
+        }
+
+        .editButton:hover {
+            cursor: pointer;
+            background-color: rgb(210, 149, 210);
+            border: 1px solid rgb(210, 149, 210);
+        }
+
+        .deleteButton {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+            height: 30px;
+            width: 80px;
+            background-color: gray;
+            color: white;
+            border: 1px solid gray;
+            border-radius: 10px;
+            box-shadow: 0 1px 2px 0 rgba(60,64,67,.3);
+            transition: all 0.5s;
+            font-weight: bold;
+            .deleteIcon {
+                height: 16px;
+                width: 14px;
+                background-image: url("../../assets/images/trash-icon.svg");
+            }
+        }
+
+        .deleteButton:hover {
+            cursor: pointer;
+            background-color: rgb(54, 54, 54);
+            border: 1px solid rgb(54, 54, 54);
+        }
+    }
+}
+
+.recipeImage {
+    height: 300px;
+}

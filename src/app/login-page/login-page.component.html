@@ -1,0 +1,39 @@
+<div class="login-container">
+  <div class="image-container">
+    <img
+      src="https://images.pexels.com/photos/1028714/pexels-photo-1028714.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+      alt="Image">
+  </div>
+  <div class="form-container">
+    <h1>LOGIN</h1>
+    <form [formGroup]="loginForm" (ngSubmit)="submit();">
+      <mat-form-field>
+        <input matInput formControlName="email" placeholder="Email address" />
+        <mat-error *ngIf="loginForm.get('email')?.hasError('required')">
+          Email address is required
+        </mat-error>
+        <mat-error *ngIf="loginForm.get('email')?.hasError('email')">
+          Please enter a valid email address
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput type="password" formControlName="password" placeholder="Password" />
+        <mat-error *ngIf="loginForm.get('password')?.hasError('required')">
+          Password is required
+        </mat-error>
+      </mat-form-field>
+      <div class="checkbox">
+        <input type="checkbox" [checked]="isChecked" (change)="handleCheck($event)" />
+        Remember me
+      </div>
+      <div class="buttons">
+        <button class="button-class" type="submit">Log in</button>
+        <div class="sign-up">
+          Don't have an account?
+          <a class="link" routerLink="/register"> Create an account! </a>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+<router-outlet></router-outlet>

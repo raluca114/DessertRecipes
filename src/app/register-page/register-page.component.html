@@ -1,0 +1,64 @@
+<div class="signup-container">
+    <div class="image-container">
+        <img src="https://images.pexels.com/photos/1028714/pexels-photo-1028714.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            alt="Image">
+    </div>
+    <div class="form-container">
+        <h1>SIGN UP </h1>
+        <form [formGroup]="signUpForm" (ngSubmit)="submit()">
+            <mat-form-field>
+                <input matInput placeholder="First Name" formControlName="firstName" />
+                <mat-error *ngIf="signUpForm.get('firstName')?.hasError('required')">
+                    First Name is required
+                </mat-error>
+            </mat-form-field>
+
+            <mat-form-field>
+                <input matInput placeholder="Last Name" formControlName="lastName" />
+                <mat-error *ngIf="signUpForm.get('lastName')?.hasError('required')">
+                    Last Name is required
+                </mat-error>
+            </mat-form-field>
+
+            <mat-form-field>
+                <input matInput placeholder="Email address" formControlName="email" />
+                <mat-error *ngIf="signUpForm.get('email')?.hasError('required')">
+                    Email address is required
+                </mat-error>
+                <mat-error *ngIf="signUpForm.get('email')?.hasError('email')">
+                    Please enter a valid email address
+                </mat-error>
+            </mat-form-field>
+
+            <mat-form-field>
+                <input matInput type="password" placeholder="Password" formControlName="password" />
+                <mat-error *ngIf="signUpForm.get('password')?.hasError('required')">
+                    Password is required
+                </mat-error>
+                <mat-error *ngIf="signUpForm.get('password')?.hasError('pattern')">
+                    Password must contain at least one uppercase letter, one lowercase letter, one digit, one special
+                    character and at least 8 characters
+                </mat-error>
+
+            </mat-form-field>
+
+            <mat-form-field>
+                <input matInput type="password" placeholder="Confirm Password" formControlName="confirmPassword" />
+                <mat-error *ngIf="signUpForm.get('confirmPassword')?.hasError('required')">
+                    Confirm Password is required
+                </mat-error>
+                <mat-error *ngIf="signUpForm.errors?.['passwordsDontMatch']">
+                    Passwords should match
+                </mat-error>
+            </mat-form-field>
+
+        </form>
+        <div class="buttons">
+            <button class="button-class" type="submit">Sign up</button>
+            <div class="login"> Have an account already?
+                <a class="link" routerLink="/login"> Login </a>
+            </div>
+        </div>
+
+    </div>
+</div>
